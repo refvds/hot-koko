@@ -1,0 +1,46 @@
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.logoBlock {
+  display: flex;
+  align-items: center;
+  max-width: 270px;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+}
+.slogan {
+  font-size: 14px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.stickyNav {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.rightColumn {
+  display: flex;
+  gap: 10px;
+}
