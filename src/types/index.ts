@@ -7,10 +7,10 @@ export interface INavButton {
 export interface IProductsApi {
   id: string;
   title: string;
-  image: string;
-  desc?: string;
+  imageUrl: string;
+  description?: string;
   ingredients?: Array<string>;
-  fullDec?: string;
+  fullDescription?: string;
   rate?: number;
   price?: number;
   allergents?: Array<string>;

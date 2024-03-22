@@ -7,10 +7,10 @@ export const footerNav: Array<INavButton> = [
 ];
 
 export const headerNav: Array<INavButton> = [
-  { title: 'Combo', icon: './assets/icons/combo.svg' },
-  { title: 'Humbergers', icon: '/assets/icons/burger.svg' },
-  { title: 'Chiken sandwiches & nuggets', icon: '/assets/icons/sandwitch.svg' },
-  { title: 'Fries & sides', icon: '/assets/icons/fries.svg' },
+  { title: 'Combo', icon: '/assets/icons/combo.svg' },
+  { title: 'Chicken Sandwiches & Nuggets', icon: '/assets/icons/chicken.svg' },
+  { title: 'Hamburgers', icon: '/assets/icons/hamburgers.svg' },
+  { title: 'Fries & Sides', icon: '/assets/icons/fries.svg' },
   { title: 'Drinks', icon: '/assets/icons/drinks.svg' },
-  { title: 'Desserts', icon: '/assets/icons/dessert.svg' },
+  { title: 'Sweets & Treats', icon: '/assets/icons/sweets.svg' },
 ];
