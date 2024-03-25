@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { AppDispatch, useAppDispatch } from '@/redux/store';
+import { FC, useEffect } from 'react';
+import { AppDispatch, useAppDispatch, useAppSelector } from '@/redux/store';
 import { addToCart } from '@/redux/cartSlice';
 import { IProductsApi } from '@/types';
 import styles from './styles.module.css';
@@ -14,6 +14,17 @@ type PostCardProps = {
 
 export const ProductCard: FC<PostCardProps> = ({ title, image, price, description, product }) => {
   const dispatch: AppDispatch = useAppDispatch();
+  const { cartToggle } = useAppSelector((state) => state.cart);
+
+  useEffect(() => {
+    if (typeof window != 'undefined' && window.document && cartToggle) {
+      document.body.style.overflow = 'hidden';
+    }
+  }, [cartToggle]);
+
+  const handleToggle = () => {
+    dispatch(addToCart(product));
+  };
   return (
     <article className={styles.card}>
       <div className={styles.imageBlock}>
@@ -23,7 +34,7 @@ export const ProductCard: FC<PostCardProps> = ({ title, image, price, descriptio
       <p className={styles.description}>{description}</p>
       <footer className={styles.footer}>
         <span>${price}</span>
-        <button onClick={() => dispatch(addToCart(product))}>Add</button>
+        <button onClick={handleToggle}>Add</button>
       </footer>
     </article>
   );

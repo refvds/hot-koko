@@ -5,14 +5,21 @@ import { toggle } from '@/redux/cartSlice';
 import CartPorduct from '../CartProduct';
 
 const Cart = () => {
-  const cartToggle = useAppSelector((state) => state.cart.cartToggle);
+  const { cartToggle, cart } = useAppSelector((state) => state.cart);
   const dispatch: AppDispatch = useDispatch();
+
+  const handleToggle = () => {
+    dispatch(toggle(!cartToggle));
+    document.body.style.overflow = 'unset';
+  };
 
   return (
     <aside className={styles.cart}>
-      <button className={styles.closeBtn} onClick={() => dispatch(toggle(!cartToggle))}></button>
+      <button className={styles.closeBtn} onClick={handleToggle}></button>
       <div className={styles.cartContent}>
-        <CartPorduct />
+        {cart.map((product) => (
+          <CartPorduct id={product.id} title={product.title} imageUrl={product.imageUrl} sizes={product.size} />
+        ))}
       </div>
     </aside>
   );

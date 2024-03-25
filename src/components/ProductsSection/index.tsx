@@ -6,7 +6,7 @@ import { IProductsApi } from '@/types';
 const ProductsSection = ({ group }) => {
   return (
     <section>
-      <h2>{group.type}</h2>
+      <h2>{group?.type}</h2>
       <div className={styles.sectionGrid}>
         {group.data?.map((item: IProductsApi) => (
           <ProductCard

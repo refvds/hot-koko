@@ -1,16 +1,27 @@
-import React from 'react';
+import { FC } from 'react';
 import styles from './styles.module.css';
 
-const CartPorduct = () => {
+type CardProductProps = {
+  id: string;
+  title: string;
+  imageUrl: string;
+  sizes?: Array<string> | [];
+};
+
+const CartPorduct: FC<CardProductProps> = ({ id, title, imageUrl, sizes }) => {
   return (
     <article className={styles.container}>
       <article className={styles.infoBlock}>
-        <img className={styles.img} src='/assets/images/bg.png' alt='burger' />
+        <img className={styles.img} src={imageUrl} alt={title} />
         <div className={styles.description}>
-          <h4 className={styles.title}>Bacon, Egg, & Cheese Croissant</h4>
-          <div className={styles.badges}>
-            <span className={styles.badge}>md</span>
-          </div>
+          <h4 className={styles.title}>{title}</h4>
+          <ul className={styles.badges}>
+            {sizes?.map((size: string, index: number) => (
+              <li className={styles.badge} key={index}>
+                {size}
+              </li>
+            ))}
+          </ul>
           <span className={styles.details}>350 kl</span>
         </div>
         <button className={styles.removeBtn}>X</button>
