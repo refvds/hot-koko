@@ -4,6 +4,16 @@ header {
   padding: 20px;
 }
 
+.headerItem {
+  cursor: pointer;
+  &:hover {
+    & svg path {
+      fill: rgb(255, 105, 0);
+    }
+    color: rgb(255, 105, 0);
+  }
+}
+
 .logoBlock {
   display: flex;
   align-items: center;
@@ -43,4 +53,43 @@ header {
 .rightColumn {
   display: flex;
   gap: 10px;
+}
+
+.cartBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  background-color: rgb(255, 105, 0);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 40px;
+  &:hover {
+    & .count {
+      display: none;
+    }
+    & .cartIcon {
+      padding: 0;
+      margin: 0;
+      display: inline;
+      margin-left: 20px;
+      padding-left: 20px;
+      border: none;
+      border-left: 1px solid white;
+    }
+  }
+}
+
+.cartIcon {
+  display: none;
+}
+
+.count {
+  display: inline;
+  margin-left: 20px;
+  padding-left: 20px;
+  border: none;
+  border-left: 1px solid white;
 }

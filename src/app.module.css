@@ -8,3 +8,8 @@
 .main {
   flex: 1;
 }
+
+button,
+a {
+  cursor: pointer;
+}

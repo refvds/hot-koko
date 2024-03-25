@@ -1,6 +1,6 @@
 import { ProductCard } from '@/components/ProductCard';
 import ProductsSection from '@/components/ProductsSection';
-import { useGetAllProductsQuery } from '@/redux';
+import { useGetAllProductsQuery } from '@/redux/api';
 import { IProductsApi } from '@/types';
 import { groupObjectByType } from '@/utils';
 import React, { useEffect, useState } from 'react';

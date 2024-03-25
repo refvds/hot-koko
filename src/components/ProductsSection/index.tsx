@@ -9,7 +9,13 @@ const ProductsSection = ({ group }) => {
       <h2>{group.type}</h2>
       <div className={styles.sectionGrid}>
         {group.data?.map((item: IProductsApi) => (
-          <ProductCard title={item.title} image={item.imageUrl} price={item.price!} description={item.description!} />
+          <ProductCard
+            title={item.title}
+            image={item.imageUrl}
+            price={item.price!}
+            description={item.description!}
+            product={item}
+          />
         ))}
       </div>
     </section>

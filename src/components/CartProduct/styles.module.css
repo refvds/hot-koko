@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 10px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.infoBlock {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.img {
+  max-width: 4.5rem;
+}
+
+.title {
+  font-size: 0.9rem;
+}
+
+.details {
+  font-size: 0.8rem;
+}
+
+.badges {
+  display: flex;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  color: #d35b06;
+  background-color: #ffd2b3;
+  font-size: 0.8rem;
+}
+
+.removeBtn {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #f3f3f7;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.btnControlBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 25px;
+  width: 100px;
+  background-color: #f3f3f7;
+  padding: 0 15px;
+}
+
+.control {
+  color: #5c6370;
+  background: transparent;
+  border: none;
+  border-radius: 25px;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.count {
+  font-size: 1rem;
+}
